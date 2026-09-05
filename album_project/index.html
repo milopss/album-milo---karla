@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff4f6">
+<title>Karla & Milo — Nuestros recuerdos ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="intro" class="intro">
+  <div class="petals" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span><span>✿</span><span>♡</span></div>
+  <div class="intro-card">
+    <div class="eyebrow">un pequeño lugar para nosotros</div>
+    <h1>Recuerdos<br><em>Karla & Milo</em></h1>
+    <img src="assets/snoopy-cover.png" alt="Snoopy y Snoopy enamorados" class="cover-snoopy">
+    <p>Un álbum para guardar esos momentos que no quiero olvidar.</p>
+    <button id="start" class="primary">abrir nuestro álbum ♡</button>
+    <div class="tiny">25.06 — ∞</div>
+  </div>
+</div>
+
+<header class="topbar"><div>*Atte.: milo &lt;3</div><a href="admin.html">admin</a></header>
+<main id="app" class="hidden">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">nuestros recuerdos</div>
+      <h2>Karla & Milo<br><em>♡</em></h2>
+      <p>Hay momentos que pasan rápido, pero que merecen quedarse para siempre.</p>
+      <div class="date-pill">25.06 — ∞</div>
+    </div>
+  </section>
+
+  <section class="album-wrap">
+    <div class="album-shadow"></div>
+    <article id="album" class="album">
+      <div id="loading" class="loading">abriendo nuestro álbum... ♡</div>
+      <div id="empty" class="empty hidden">
+        <img src="assets/snoopy-cover.png" alt="Snoopy">
+        <h3>Aún no hay recuerdos aquí</h3>
+        <p>Cuando agregues el primero desde tu panel privado, aparecerá en este lugar. ♡</p>
+      </div>
+      <div id="memoryView" class="memory hidden">
+        <div class="memory-top"><span id="counter">01 / 01</span><span id="memoryDate"></span></div>
+        <div class="photo-stage">
+          <button class="photo-nav photo-prev" id="photoPrev" aria-label="Foto anterior">‹</button>
+          <img id="mainPhoto" src="assets/snoopy-cover.png" alt="Recuerdo">
+          <button class="photo-nav photo-next" id="photoNext" aria-label="Foto siguiente">›</button>
+          <div id="photoDots" class="photo-dots"></div>
+        </div>
+        <div class="memory-copy">
+          <div id="memoryLocation" class="location"></div>
+          <h3 id="memoryTitle"></h3>
+          <button id="descriptionBtn" class="ghost">♡ descubrir este recuerdo</button>
+          <div id="description" class="description hidden"></div>
+          <div id="quote" class="quote hidden"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="navigation hidden" id="navigation">
+    <button id="prevMemory" class="nav-btn"> ← </button>
+    <div class="timeline-label">desliza / toca para seguir ♡</div>
+    <button id="nextMemory" class="nav-btn"> → </button>
+  </section>
+
+  <section class="timeline-section">
+    <div class="eyebrow">la historia sigue</div>
+    <h2>Pequeños momentos,<br><em>grandes recuerdos.</em></h2>
+    <p>nuestra linea de tiempo ♡</p>
+    <div id="timeline" class="timeline"></div>
+  </section>
+
+  <section class="closing">
+    <img src="assets/snoopy5.png" alt="Snoopy" class="closing-snoopy">
+    <h2>Y todavía quedan páginas vacías...</h2>
+    <p>Para todos los recuerdos bonitos que todavía están por escribirse.</p>
+    <div class="signature">con cariño,<br>milo &lt;3</div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
